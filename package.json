@@ -1,0 +1,14 @@
+{
+  "name": "npmjs-package",
+  "version": "1.0.0",
+  "description": "一个npm包测试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npmjs"
+  ],
+  "author": "codeme",
+  "license": "ISC"
+}
