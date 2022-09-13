@@ -5,7 +5,8 @@ import store from "./store";
 // import { plugins } from "../../../dist/mcsdk";
 // const { VueAccessControl } = plugins;
 
-import { VueAccessControl } from "../../../dist/plugins";
+// import { VueAccessControl } from "../../../dist/plugins";
+import { VueAccessControl } from "npmjs-package/dist/plugins";
 
 Vue.config.productionTip = false;
 Vue.use(VueAccessControl, { router });
