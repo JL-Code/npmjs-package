@@ -1,6 +1,6 @@
 {
   "name": "npmjs-package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个npm包测试",
   "main": "dist/mcsdk.js",
   "scripts": {
