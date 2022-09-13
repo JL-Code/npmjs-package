@@ -1,0 +1,42 @@
+/**
+ * webpack 创建一个 Library
+ * @see https://www.webpackjs.com/guides/author-libraries/#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-library
+ */
+const path = require("path");
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
+module.exports = [
+  {
+    mode: "production",
+    entry: "./src/main.js",
+    resolve: {
+      alias: {
+        "@": resolve("src")
+      }
+    },
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: "mcsdk.js",
+      library: "mcsdk",
+      libraryTarget: "umd" // 导出的变量兼容 CommonJS, AMD 和 全局变量
+    }
+  },
+  {
+    mode: "production",
+    entry: "./src/plugins/index.js",
+    resolve: {
+      alias: {
+        "@": resolve("src")
+      }
+    },
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: "plugins.js",
+      library: "plugins",
+      libraryTarget: "umd" // 导出的变量兼容 CommonJS, AMD 和 全局变量
+    }
+  }
+];
