@@ -1,4 +1,8 @@
-import Draggable from './draggable'
-import Resizable from './resizable'
+import draggable from './draggable'
+import resizable from './resizable'
 
-export const directives = [Draggable, Resizable]
+export { draggable, resizable }
+export default {
+    draggable,
+    resizable,
+}

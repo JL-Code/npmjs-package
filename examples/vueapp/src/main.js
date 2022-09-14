@@ -3,20 +3,24 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// import { VueAccessControl, VueDialog } from '../../../dist/plugins'
-import { VueAccessControl, VueDialog } from 'npmjs-package/dist/plugins'
-import { directives } from 'npmjs-package'
+import { VueAccessControl, VueDialog } from '../../../dist/plugins'
+import { directives, utils, plugins } from '../../../dist'
+
+// import { VueAccessControl, VueDialog } from 'npmjs-package/dist/plugins'
+// import { directives } from 'npmjs-package'
 
 Vue.config.productionTip = false
+
+console.debug('[npmjs-package]', VueAccessControl, VueDialog)
+console.debug('[npmjs-package]', directives, utils, plugins)
 
 Vue.use(VueAccessControl, { router })
 Vue.use(VueDialog)
 
-// TODO: 可以考虑提供一个统一注册函数（指令、插件一起注册）
-// 注册 Vue 指令。
-directives.forEach((directive) =>
-    Vue.directive(directive.name, directive.handler)
-)
+Object.keys(directives).forEach((key) => {
+    console.log('key', key)
+    Vue.directive(directives[key].name, directives[key].handler)
+})
 
 new Vue({
     router,
