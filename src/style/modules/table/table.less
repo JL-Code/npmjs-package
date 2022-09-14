@@ -1,0 +1,109 @@
+@import "../../base/fn.less";
+
+/*调整 el-table 样式*/
+@tableHeaderBackgroundColor: #eeeeee;
+@tableBorderColor: #dddddd;
+@tableHeaderTextColor: #666;
+.el-table thead.is-group th {
+  background: #eeeeee !important;
+}
+.baseButton{
+  cursor: pointer;
+}
+.baseButton :hover{
+  cursor: pointer;
+}
+.crccre-table {
+  // 表头背景色
+  // .crccre-table__header {
+  //   color: @tableHeaderTextColor;
+  //   & > th {
+  //     background-color: @tableHeaderBackgroundColor;
+  //   }
+  // }
+  // // 覆盖默认边框
+  // &.el-table--border th,
+  // &.el-table th.is-leaf {
+  //   border-top: 1px solid @tableBorderColor;
+  //   border-bottom: 1px solid @tableBorderColor;
+  //   border-right: 1px solid @tableBorderColor;
+  //   &:first-child {
+  //     border-left: 1px solid @tableBorderColor;
+  //   }
+  // }
+  // // 覆盖复合表头边框
+  // &.el-table--group.el-table--border.el-table--border th,
+  // &.el-table--group.el-table--border.el-table th.is-leaf {
+  //   border-top: 1px solid @tableBorderColor;
+  //   border-bottom: none;
+  //   border-left: 1px solid @tableBorderColor;
+  //   &:first-child {
+  //     border-left: 1px solid @tableBorderColor;
+  //   }
+  // }
+  // // 覆盖含有复合表头的表格边框
+  // &.el-table--border.el-table--group {
+  //   border: none;
+  // }
+  // // 覆盖复合表头边框 右边和底部
+  // &.el-table--border::after,
+  // &.el-table--group::after {
+  //   display: none;
+  // }
+  // // 覆盖含有复合表头的表格边框
+  // &.el-table.el-table--group td,
+  // &.el-table--group.el-table--border td,
+  // &.el-table.el-table--group th.is-leaf {
+  //   border: none;
+  //   border-bottom: 1px solid #ebeef5;
+  // }
+
+  // // 多级表头
+  // &.el-table thead.is-group th {
+  //   background: @tableHeaderBackgroundColor;
+  // }
+  // 表格字体大小
+  &.el-table--mini,
+  &.el-table--small,
+  &.el-table__expand-icon {
+    font-size: 14px;
+  }
+
+  // // 表格 内边距
+  // &.el-table--mini td,
+  // &.el-table--mini th {
+  //   padding: 7px 0;
+  // }
+
+  // // 排序图标大小
+  // &.el-table .caret-wrapper {
+  //   height: 29px;
+  // }
+  // &.el-table .sort-caret.ascending {
+  //   top: 3px;
+  // }
+  // &.el-table .sort-caret.descending {
+  //   bottom: 3px;
+  // }
+}
+.crccre-table_layout-auto {
+  width: 100%;
+  .el-table__body,
+  .el-table__footer,
+  .el-table__header {
+    table-layout: auto;
+    // color: red;
+  }
+}
+.crccre-table_layout-fixed {
+  .el-table__body,
+  .el-table__footer,
+  .el-table__header {
+    table-layout: fixed;
+    // color: inherit;
+  }
+}
+// 防止 tooltip 超长显示
+.el-tooltip__popper {
+  max-width: 450px;
+}

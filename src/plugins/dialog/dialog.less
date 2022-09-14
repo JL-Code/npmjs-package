@@ -1,0 +1,86 @@
+@import "../../style/base/fn.less";
+@dialogHeaderColor: #f8f8f8;
+@headerBottomColor: #e8e8e8;
+
+// 调整 element dialog 样式
+.fix_dialog {
+  .is-fullscreen {
+    // 强制还原坐标
+    top: 0 !important;
+    left: 0 !important;
+    .el-dialog__body {
+      height: calc(100% - 51px);
+      .dialog-body__embedded {
+        height: 100% !important;
+      }
+    }
+  }
+  .el-dialog__header {
+    display: flex;
+    padding: 16px 16px 10px;
+    border-bottom: 1px solid @headerBottomColor;
+  }
+  // dialog 不自带padding
+  .el-dialog__body {
+    padding: 0;
+    .el-tabs--border-card {
+      border-top: none;
+    }
+    .el-tabs--left .el-tabs__header.is-left {
+      margin-right: 0;
+    }
+    .el-tabs__item {
+      min-width: 140px;
+    }
+    & > .fix_el-tabs {
+      padding: 0;
+    }
+  }
+  .el-dialog__title {
+    line-height: 22px;
+  }
+  // dialog header button css
+  .el-dialog__headerbtn {
+    position: static;
+    margin-left: 10px;
+    i {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+  // 调整 element tabs 样式
+  .fix_el-tabs.el-tabs {
+    height: 100%;
+    .el-tabs__content {
+      padding: 0;
+      height: 100%;
+      .el-tab-pane {
+        height: 100%;
+      }
+    }
+  }
+}
+.dialog-header__title {
+  flex: 1;
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+  color: #303133;
+  // 防止文本换行，自动截断并加上省略号
+  .ellipsis();
+}
+.header-btn_maximizable {
+  font-size: 16px;
+  padding: 0;
+  background: 0 0;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  i.iconfont {
+    color: #909399;
+    &:focus,
+    &:hover {
+      color: #409eff;
+    }
+  }
+}

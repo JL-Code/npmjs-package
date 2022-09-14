@@ -1,6 +1,8 @@
-import VueAccessControl from "./vue-access-control";
+import VueAccessControl from './vue-access-control'
+import VueDialog from './dialog'
 
-export { VueAccessControl };
+export { VueAccessControl, VueDialog }
 export default {
-  VueAccessControl
-};
+    VueAccessControl,
+    VueDialog,
+}

@@ -5,7 +5,8 @@
   "main": "dist/mcsdk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "release": "standard-version"
   },
   "keywords": [
     "npmjs"
@@ -17,10 +18,17 @@
   "author": "codeme",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/parse": "^17.0.0",
+    "eslint": "^8.23.1",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "pkgfiles": "^2.3.2"
   }
 }
