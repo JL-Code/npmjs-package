@@ -54,10 +54,11 @@ module.exports = [
     {
         mode: 'production',
         entry: './src/main.js',
+        // https://webpack.docschina.org/guides/author-libraries/#expose-the-library
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: 'index.js',
-            library: 'mcsdk',
+            library: 'mcsdk', // 用户通过 window.mcsdk 来使用
             libraryTarget: 'umd', // 导出的变量兼容 CommonJS, AMD 和 全局变量
         },
         ...commonOptions,

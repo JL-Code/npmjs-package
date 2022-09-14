@@ -3,11 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import { VueAccessControl, VueDialog } from '../../../dist/plugins'
-import { directives, utils, plugins } from '../../../dist'
+// import { VueAccessControl, VueDialog } from '../../../dist/plugins'
+// import { directives, utils, plugins } from '../../../dist'
 
-// import { VueAccessControl, VueDialog } from 'npmjs-package/dist/plugins'
-// import { directives } from 'npmjs-package'
+import { VueAccessControl, VueDialog } from 'npmjs-package/dist/plugins'
+import { directives, utils, plugins } from 'npmjs-package'
 
 Vue.config.productionTip = false
 
