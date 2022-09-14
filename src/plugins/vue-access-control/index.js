@@ -3,11 +3,11 @@ import { auth } from '@/utils'
  * 访问控制插件
  */
 const LOGIN_ROUTE_NAME = 'Login'
-const WHITE_LIST = [LOGIN_ROUTE_NAME]
+const DEFAULT_WHITE_LIST = [LOGIN_ROUTE_NAME]
 export default {
     install(Vue, options) {
         const { loginRoute = LOGIN_ROUTE_NAME, whiteList = [] } = options
-        const _whiteList = Object.assign({}, WHITE_LIST, whiteList)
+        const _whiteList = whiteList.length ? whiteList : DEFAULT_WHITE_LIST
         console.debug('[vue-access-control] installed')
         const { router } = options
         router.beforeEach((to, from, next) => {
