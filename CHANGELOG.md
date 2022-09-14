@@ -1,4 +1,11 @@
 # 变更日志
+### [1.1.4](https://github.com/JL-Code/npmjs-package/compare/v1.1.3...v1.1.4) (2022-09-14)
+
+
+### 🐛 Bug Fixes | 修复缺陷
+
+* 修复指令导出问题 ([f5ffd5b](https://github.com/JL-Code/npmjs-package/commit/f5ffd5bb5cb1edec7b18281fd2ef4bf05d485a94))
+
 ### [1.1.3](https://github.com/JL-Code/npmjs-package/compare/v1.1.2...v1.1.3) (2022-09-14)
 
 ### [1.1.2](https://github.com/JL-Code/npmjs-package/compare/v1.1.1...v1.1.2) (2022-09-14)
