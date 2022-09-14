@@ -1,4 +1,6 @@
 # 变更日志
+### [1.1.5](https://github.com/JL-Code/npmjs-package/compare/v1.1.4...v1.1.5) (2022-09-14)
+
 ### [1.1.4](https://github.com/JL-Code/npmjs-package/compare/v1.1.3...v1.1.4) (2022-09-14)
 
 
