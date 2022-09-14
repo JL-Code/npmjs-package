@@ -11,6 +11,8 @@
 
 ## 缩小npm包体积
 
+### 外部扩展(Externals)
+> https://webpack.docschina.org/configuration/externals/
 ### 白名单模式
 > 只有 dist、src 目录会被包含在 npm 包中。
 package.json 
@@ -21,6 +23,18 @@ package.json
     "src"
   ],
 }
+```
+
+### 移除未使用的 lodash 功能
+
+```shell
+npm install lodash-webpack-plugin --save-dev
+```
+
+webpack.config.js 查看
+> https://www.npmjs.com/package/lodash-webpack-plugin
+```js
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 ```
 
 ### pkgfiles
