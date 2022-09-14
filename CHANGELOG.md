@@ -1,4 +1,11 @@
 # 变更日志
+### [1.1.1](https://github.com/JL-Code/npmjs-package/compare/v1.1.0...v1.1.1) (2022-09-14)
+
+
+### 🐛 Bug Fixes | 修复缺陷
+
+* 修复访问控制插件的逻辑错误 ([6493400](https://github.com/JL-Code/npmjs-package/commit/6493400dd83c2aff80df10ddad3df8408c60e9be))
+
 ## 1.1.0 (2022-09-14)
 
 
