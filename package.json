@@ -1,8 +1,8 @@
 {
   "name": "npmjs-package",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "一个npm包测试",
-  "main": "dist/mcsdk.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
