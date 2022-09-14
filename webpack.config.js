@@ -9,67 +9,68 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
+const commonOptions = {
+    devtool: 'source-map',
+    resolve: {
+        alias: {
+            '@': resolve('src'),
+        },
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.css$/,
+                use: ['vue-style-loader', 'css-loader'],
+            },
+            {
+                test: /\.less$/,
+                use: ['vue-style-loader', 'css-loader', 'less-loader'],
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+            },
+        ],
+    },
+    plugins: [new VueLoaderPlugin()],
+    externals: {
+        /* 将 lodash 外部化，不打包到 bundle.js
+         * @see https://webpack.docschina.org/configuration/externals/#object
+         */
+        lodash: {
+            commonjs: 'lodash',
+            commonjs2: 'lodash',
+            amd: 'lodash',
+            root: '_', // 指向全局变量
+        },
+    },
+}
+
 module.exports = [
-    // {
-    //     mode: 'production',
-    //     entry: './src/main.js',
-    //     resolve: {
-    //         alias: {
-    //             '@': resolve('src'),
-    //         },
-    //     },
-    //     output: {
-    //         path: path.resolve(__dirname, 'dist'),
-    //         filename: 'mcsdk.js',
-    //         library: 'mcsdk',
-    //         libraryTarget: 'umd', // 导出的变量兼容 CommonJS, AMD 和 全局变量
-    //     },
-    // },
+    {
+        mode: 'production',
+        entry: './src/main.js',
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            filename: 'mcsdk.js',
+            library: 'mcsdk',
+            libraryTarget: 'umd', // 导出的变量兼容 CommonJS, AMD 和 全局变量
+        },
+        ...commonOptions,
+    },
     {
         mode: 'production',
         entry: './src/plugins/index.js',
-        resolve: {
-            alias: {
-                '@': resolve('src'),
-            },
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.js$/,
-                    loader: 'babel-loader',
-                },
-                {
-                    test: /\.css$/,
-                    use: ['vue-style-loader', 'css-loader'],
-                },
-                {
-                    test: /\.less$/,
-                    use: ['vue-style-loader', 'css-loader', 'less-loader'],
-                },
-                {
-                    test: /\.vue$/,
-                    loader: 'vue-loader',
-                },
-            ],
-        },
-        plugins: [new VueLoaderPlugin()],
-        externals: {
-            /* 将 lodash 外部化，不打包到 bundle.js
-             * @see https://webpack.docschina.org/configuration/externals/#object
-             */
-            lodash: {
-                commonjs: 'lodash',
-                commonjs2: 'lodash',
-                amd: 'lodash',
-                root: '_', // 指向全局变量
-            },
-        },
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: 'plugins.js',
             library: 'plugins',
             libraryTarget: 'umd', // 导出的变量兼容 CommonJS, AMD 和 全局变量
         },
+        ...commonOptions,
     },
 ]
