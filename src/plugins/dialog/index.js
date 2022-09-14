@@ -171,7 +171,7 @@ DialogPlugin.install = function (Vue, options) {
                             // close: handleClose
                         },
                     }
-
+                    console.debug('dialog props payload', payload)
                     const embeddedAttrs = {
                         style: { height: calcHeight },
                         class: ['dialog-body__embedded'],

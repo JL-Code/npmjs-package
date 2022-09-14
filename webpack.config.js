@@ -56,7 +56,7 @@ module.exports = [
         entry: './src/main.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'mcsdk.js',
+            filename: 'index.js',
             library: 'mcsdk',
             libraryTarget: 'umd', // 导出的变量兼容 CommonJS, AMD 和 全局变量
         },

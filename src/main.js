@@ -1,6 +1,5 @@
-import plugins from "./plugins";
-import utils from "./utils";
+import plugins from './plugins'
+import utils from './utils'
+import directives from './directives'
 
-export { plugins, utils };
-
-
+export { plugins, utils, directives }
