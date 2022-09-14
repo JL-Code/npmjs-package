@@ -1,2 +1,2 @@
 #!/bin/bash
-npm run build && npm run release && npm publish
+npm run build && npm run release && git push --follow-tags origin master && npm publish
